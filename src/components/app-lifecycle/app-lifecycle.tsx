@@ -13,8 +13,14 @@ export class AppLifecycle {
     console.log(name);
   }
 
+  countup = () => {
+    this.count++;
+    sessionStorage.setItem('count', '' + this.count);
+  };
+
   connectedCallback() {
     this.log('1. connectedCallback');
+    this.count = +sessionStorage.getItem('count');
   }
 
   componentWillLoad() {
@@ -55,7 +61,7 @@ export class AppLifecycle {
       return (
         <div>
           <h1>Lifecycle</h1>
-          <button onClick={() => this.count++}>Counter</button>
+          <button onClick={this.countup}>Counter</button>
           <h2>{this.count}</h2>
         </div>
       );

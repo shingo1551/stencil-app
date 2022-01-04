@@ -48,3 +48,5 @@ serve -s www
 @State() loading = true;
 @State() count = 0;
 ```
+
+- sessionStorage: save count

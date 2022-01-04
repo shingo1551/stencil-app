@@ -9,6 +9,7 @@
 - name
 
 ## Route
+- onClick
 
 ```
   <app-root></app-root>
@@ -33,3 +34,11 @@ import { Router } from '../../shared/router';
 ```
 
 ## Life Cycle
+- State()
+- Lifecycle Method
+- settimeout0, loading
+
+```
+@State() loading = true;
+@State() count = 0;
+```

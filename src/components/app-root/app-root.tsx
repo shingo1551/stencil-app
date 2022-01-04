@@ -27,6 +27,9 @@ export class AppRoot {
               path={match('/hello/:name')}
               render={({ name }) => <app-hello1 name={name}></app-hello1>}
             />
+            <Route path='/lifecycle'>
+              <app-lifecycle></app-lifecycle>
+            </Route>
           </Router.Switch>
 
           {/* <Router.Switch>

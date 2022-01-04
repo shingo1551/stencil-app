@@ -22,6 +22,10 @@ export class AppHome1 {
         </a>
 
         <button onClick={this.onClick}>Click me!</button>
+
+        <a {...href('/lifecycle')}>
+          <button>Lifecycle</button>
+        </a>
       </div>
     );
   }

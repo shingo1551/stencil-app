@@ -33,6 +33,12 @@ import { Router } from '../../shared/router';
 </Router.Switch>
 ```
 
+## build, serve, reload
+```
+npm i -g serve
+serve -s www
+```
+
 ## Life Cycle
 - State()
 - Lifecycle Method

@@ -26,6 +26,10 @@ export class AppHome1 {
         <a {...href('/lifecycle')}>
           <button>Lifecycle</button>
         </a>
+
+        <a {...href('/todo')}>
+          <button>ToDo</button>
+        </a>
       </div>
     );
   }

@@ -30,6 +30,9 @@ export class AppRoot {
             <Route path='/lifecycle'>
               <app-lifecycle></app-lifecycle>
             </Route>
+            <Route path='/todo'>
+              <app-todo></app-todo>
+            </Route>
           </Router.Switch>
 
           {/* <Router.Switch>

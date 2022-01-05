@@ -33,6 +33,9 @@ export class AppRoot {
             <Route path='/todo'>
               <app-todo></app-todo>
             </Route>
+
+            <Route path='/404'>Not Found</Route>
+            <Route path={/./} to='/404'></Route>
           </Router.Switch>
 
           {/* <Router.Switch>

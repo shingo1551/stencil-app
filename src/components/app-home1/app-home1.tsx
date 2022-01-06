@@ -23,8 +23,18 @@ export class AppHome1 {
 
         <button onClick={this.onClick}>Click me!</button>
 
+        <a {...href('/store')}>
+          <button>Store page</button>
+        </a>
         <a {...href('/lifecycle')}>
           <button>Lifecycle</button>
+        </a>
+        <a {...href('/chart')}>
+          <button>Chart page</button>
+        </a>
+
+        <a {...href('/nest')}>
+          <button>Nest page</button>
         </a>
 
         <a {...href('/todo')}>

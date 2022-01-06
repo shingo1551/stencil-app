@@ -27,9 +27,21 @@ export class AppRoot {
               path={match('/hello/:name')}
               render={({ name }) => <app-hello1 name={name}></app-hello1>}
             />
+
+            <Route path='/store'>
+              <app-store />
+            </Route>
             <Route path='/lifecycle'>
               <app-lifecycle></app-lifecycle>
             </Route>
+            <Route path='/chart'>
+              <app-chart />
+            </Route>
+
+            <Route path={/nest/}>
+              <app-nest />
+            </Route>
+
             <Route path='/todo'>
               <app-todo></app-todo>
             </Route>
@@ -37,28 +49,6 @@ export class AppRoot {
             <Route path='/404'>Not Found</Route>
             <Route path={/./} to='/404'></Route>
           </Router.Switch>
-
-          {/* <Router.Switch>
-            <Route path='/'>
-              <app-home />
-            </Route>
-            <Route
-              path={match('/profile/:name')}
-              render={({ name }) => <app-profile name={name} />}
-            />
-            <Route path={/nest/}>
-              <app-nest />
-            </Route>
-            <Route path='/store'>
-              <app-store />
-            </Route>
-            <Route path='/chart'>
-              <app-chart />
-            </Route>
-            <Route path='/todo'>
-              <app-todo />
-            </Route>
-          </Router.Switch> */}
         </main>
       </div>
     );

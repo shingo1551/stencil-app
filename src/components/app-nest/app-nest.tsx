@@ -8,7 +8,6 @@ import { Router } from '../../shared/router';
   shadow: true,
 })
 export class AppNest {
-
   render() {
     return (
       <Host>
@@ -21,13 +20,15 @@ export class AppNest {
         </a>
 
         <Router.Switch>
-          <Route path="/nest/child">
-            <app-child />
+          <Route path='/nest/child'>
+            <my-name />
           </Route>
-          <Route path={match('/nest/child/:p1/:p2')} render={({ p1, p2 }) => <app-child p1={p1} p2={p2} />} />
+          <Route
+            path={match('/nest/child/:first/:last')}
+            render={({ first, last }) => <my-name first={first} last={last} />}
+          />
         </Router.Switch>
       </Host>
     );
   }
-
 }

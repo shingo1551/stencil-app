@@ -21,21 +21,21 @@ export class AppRoot {
               <app-home1></app-home1>
             </Route>
             <Route path='/hello'>
-              <app-hello1 name='SPA'></app-hello1>
+              <my-hello name='SPA'></my-hello>
             </Route>
             <Route
               path={match('/hello/:name')}
-              render={({ name }) => <app-hello1 name={name}></app-hello1>}
+              render={({ name }) => <my-hello name={name}></my-hello>}
             />
 
             <Route path='/store'>
-              <app-store />
+              <my-store />
             </Route>
             <Route path='/lifecycle'>
-              <app-lifecycle></app-lifecycle>
+              <my-lifecycle></my-lifecycle>
             </Route>
             <Route path='/chart'>
-              <app-chart />
+              <my-chart />
             </Route>
 
             <Route path={/nest/}>
@@ -43,7 +43,7 @@ export class AppRoot {
             </Route>
 
             <Route path='/todo'>
-              <app-todo></app-todo>
+              <my-todo></my-todo>
             </Route>
 
             <Route path='/404'>Not Found</Route>

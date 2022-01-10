@@ -22,4 +22,5 @@ export const config: Config = {
       plugins: [tailwindcss(), autoprefixer()],
     }),
   ],
+  sourceMap: true,
 };

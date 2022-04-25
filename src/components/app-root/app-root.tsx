@@ -1,5 +1,6 @@
 import { Component, h } from '@stencil/core';
-import { Route, Router, match } from '../../shared/router';
+import { Route, match } from '@stencil/router';
+import { Router } from '../../shared/router';
 
 @Component({
   tag: 'app-root',
@@ -24,7 +25,7 @@ export class AppRoot {
             </Route>
             <Route
               path={match('/hello/:name')}
-              render={({ n }) => <my-hello name={n}></my-hello>}
+              render={({ name }) => <my-hello name={name}></my-hello>}
             />
 
             <Route path='/store'>

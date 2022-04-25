@@ -1,5 +1,6 @@
 import { Component, h } from '@stencil/core';
-import { href, push } from '../../shared/router';
+import { href } from '@stencil/router';
+import { push } from '../../shared/router';
 
 @Component({
   tag: 'app-home',

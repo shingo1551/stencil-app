@@ -1,6 +1,5 @@
 import { Component, Host, h } from '@stencil/core';
-import { Route, href, match } from '@stencil/router';
-import { Router } from '../../shared/router';
+import { Route, Router, href, match } from '../../shared/router';
 
 @Component({
   tag: 'app-nest',
@@ -25,7 +24,7 @@ export class AppNest {
           </Route>
           <Route
             path={match('/nest/child/:first/:last')}
-            render={({ first, last }) => <my-name first={first} last={last} />}
+            render={({ f, l }) => <my-name first={f} last={l} />}
           />
         </Router.Switch>
       </Host>

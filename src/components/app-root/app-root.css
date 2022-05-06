@@ -13,3 +13,7 @@ main {
   display: flex;
   @apply p-2.5;
 }
+
+my-chart {
+  width: 800px;
+}

@@ -22,9 +22,11 @@ export class AppRoot {
             <Route path='/'>
               <app-home></app-home>
             </Route>
+
             <Route path='/hello'>
               <my-hello name='SPA'></my-hello>
             </Route>
+
             <Route
               path={match('/hello/:name')}
               render={({ name }) => <my-hello name={name}></my-hello>}
@@ -33,9 +35,11 @@ export class AppRoot {
             <Route path='/store'>
               <my-store />
             </Route>
+
             <Route path='/lifecycle'>
               <my-lifecycle></my-lifecycle>
             </Route>
+
             <Route path='/todo'>
               <my-todo></my-todo>
             </Route>

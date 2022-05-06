@@ -6,7 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppDraganddrop {
+    }
     interface AppHome {
+    }
+    interface AppMenu {
     }
     interface AppNest {
     }
@@ -14,11 +18,23 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppDraganddropElement extends Components.AppDraganddrop, HTMLStencilElement {
+    }
+    var HTMLAppDraganddropElement: {
+        prototype: HTMLAppDraganddropElement;
+        new (): HTMLAppDraganddropElement;
+    };
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
     }
     var HTMLAppHomeElement: {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
+    };
+    interface HTMLAppMenuElement extends Components.AppMenu, HTMLStencilElement {
+    }
+    var HTMLAppMenuElement: {
+        prototype: HTMLAppMenuElement;
+        new (): HTMLAppMenuElement;
     };
     interface HTMLAppNestElement extends Components.AppNest, HTMLStencilElement {
     }
@@ -33,20 +49,28 @@ declare global {
         new (): HTMLAppRootElement;
     };
     interface HTMLElementTagNameMap {
+        "app-draganddrop": HTMLAppDraganddropElement;
         "app-home": HTMLAppHomeElement;
+        "app-menu": HTMLAppMenuElement;
         "app-nest": HTMLAppNestElement;
         "app-root": HTMLAppRootElement;
     }
 }
 declare namespace LocalJSX {
+    interface AppDraganddrop {
+    }
     interface AppHome {
+    }
+    interface AppMenu {
     }
     interface AppNest {
     }
     interface AppRoot {
     }
     interface IntrinsicElements {
+        "app-draganddrop": AppDraganddrop;
         "app-home": AppHome;
+        "app-menu": AppMenu;
         "app-nest": AppNest;
         "app-root": AppRoot;
     }
@@ -55,7 +79,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-draganddrop": LocalJSX.AppDraganddrop & JSXBase.HTMLAttributes<HTMLAppDraganddropElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-nest": LocalJSX.AppNest & JSXBase.HTMLAttributes<HTMLAppNestElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
         }

@@ -16,6 +16,8 @@ export class AppRoot {
         </header>
 
         <main>
+          <app-menu></app-menu>
+
           <Router.Switch>
             <Route path='/'>
               <app-home></app-home>
@@ -34,16 +36,20 @@ export class AppRoot {
             <Route path='/lifecycle'>
               <my-lifecycle></my-lifecycle>
             </Route>
-            <Route path='/chart'>
-              <my-chart />
+            <Route path='/todo'>
+              <my-todo></my-todo>
             </Route>
 
             <Route path={/nest/}>
               <app-nest />
             </Route>
 
-            <Route path='/todo'>
-              <my-todo></my-todo>
+            <Route path='/chart'>
+              <my-chart />
+            </Route>
+
+            <Route path='/draganddrop'>
+              <app-draganddrop />
             </Route>
 
             <Route path='/404'>Not Found</Route>

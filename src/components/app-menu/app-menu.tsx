@@ -19,7 +19,7 @@ export class AppMenu {
         <A href='/hello'>Hello</A>
         <A href='/hello/abc'>Hello ABC</A>
 
-        <A href='#' onClick={this.onClick}>Click me!</A>
+        <A href='/hello/clicked' onClick={this.onClick}>Click me!</A>
 
         <A href='/store'>Store</A>
         <A href='/lifecycle'>Lifecycle</A>

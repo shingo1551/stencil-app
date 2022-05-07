@@ -10,4 +10,9 @@ li {
 
 a {
   text-decoration: none;
+  @apply px-1 py-0.5;
+}
+
+li.selected a {
+  @apply text-white bg-blue-500;
 }

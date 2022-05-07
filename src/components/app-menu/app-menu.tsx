@@ -1,6 +1,6 @@
 import { Component, h } from '@stencil/core';
-import { href } from '@stencil/router';
 import { push } from '../../shared/router';
+import { A } from '../../shared/menu';
 
 @Component({
   tag: 'app-menu',
@@ -18,7 +18,8 @@ export class AppMenu {
       <ul>
         <A href='/hello'>Hello</A>
         <A href='/hello/abc'>Hello ABC</A>
-        <li><a href='#' onClick={this.onClick}>Click me!</a></li>
+
+        <A href='#' onClick={this.onClick}>Click me!</A>
 
         <A href='/store'>Store</A>
         <A href='/lifecycle'>Lifecycle</A>
@@ -35,4 +36,3 @@ export class AppMenu {
 
 }
 
-const A = (props, children) => <li><a {...href(props.href)}>{children}</a></li>;

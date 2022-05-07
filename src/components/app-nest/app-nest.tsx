@@ -1,6 +1,7 @@
 import { Component, Host, h } from '@stencil/core';
-import { Route, href, match } from '@stencil/router';
+import { Route, match } from '@stencil/router';
 import { Router } from '../../shared/router';
+import { A } from '../../shared/menu';
 
 @Component({
   tag: 'app-nest',
@@ -12,12 +13,10 @@ export class AppNest {
     return (
       <Host>
         <h1>App Nest</h1>
-        <a {...href('/nest/child')}>
-          <button>Child page</button>
-        </a>
-        <a {...href('/nest/child/abc/xyz')}>
-          <button>Child page (abc, xyz)</button>
-        </a>
+        <ul>
+          <A href='/nest/child'>Child</A>
+          <A href='/nest/child/abc/xyz'>Child (abc, xyz)</A>
+        </ul>
 
         <Router.Switch>
           <Route path='/nest/child'>

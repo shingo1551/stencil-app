@@ -25,8 +25,6 @@ export class AppMenu {
         <A href='/lifecycle'>Lifecycle</A>
         <A href='/todo'>ToDo</A>
 
-        <A href='/nest'>Nest</A>
-
         <A href='/chart'>Chart</A>
 
         <A href='/draganddrop'>Drag and Drop</A>

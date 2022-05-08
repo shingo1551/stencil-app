@@ -12,8 +12,6 @@ export namespace Components {
     }
     interface AppMenu {
     }
-    interface AppNest {
-    }
     interface AppRoot {
     }
 }
@@ -36,12 +34,6 @@ declare global {
         prototype: HTMLAppMenuElement;
         new (): HTMLAppMenuElement;
     };
-    interface HTMLAppNestElement extends Components.AppNest, HTMLStencilElement {
-    }
-    var HTMLAppNestElement: {
-        prototype: HTMLAppNestElement;
-        new (): HTMLAppNestElement;
-    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
@@ -52,7 +44,6 @@ declare global {
         "app-draganddrop": HTMLAppDraganddropElement;
         "app-home": HTMLAppHomeElement;
         "app-menu": HTMLAppMenuElement;
-        "app-nest": HTMLAppNestElement;
         "app-root": HTMLAppRootElement;
     }
 }
@@ -63,15 +54,12 @@ declare namespace LocalJSX {
     }
     interface AppMenu {
     }
-    interface AppNest {
-    }
     interface AppRoot {
     }
     interface IntrinsicElements {
         "app-draganddrop": AppDraganddrop;
         "app-home": AppHome;
         "app-menu": AppMenu;
-        "app-nest": AppNest;
         "app-root": AppRoot;
     }
 }
@@ -82,7 +70,6 @@ declare module "@stencil/core" {
             "app-draganddrop": LocalJSX.AppDraganddrop & JSXBase.HTMLAttributes<HTMLAppDraganddropElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
-            "app-nest": LocalJSX.AppNest & JSXBase.HTMLAttributes<HTMLAppNestElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
         }
     }

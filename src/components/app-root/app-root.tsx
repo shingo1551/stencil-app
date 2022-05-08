@@ -44,10 +44,6 @@ export class AppRoot {
               <my-todo></my-todo>
             </Route>
 
-            <Route path={/nest/}>
-              <app-nest />
-            </Route>
-
             <Route path='/chart'>
               <my-chart />
             </Route>

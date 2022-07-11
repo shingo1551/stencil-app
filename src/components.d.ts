@@ -14,6 +14,12 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface MyChart {
+    }
+    interface MySimpleList {
+        "group": string;
+        "titleText": string;
+    }
 }
 declare global {
     interface HTMLAppDraganddropElement extends Components.AppDraganddrop, HTMLStencilElement {
@@ -40,11 +46,25 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLMyChartElement extends Components.MyChart, HTMLStencilElement {
+    }
+    var HTMLMyChartElement: {
+        prototype: HTMLMyChartElement;
+        new (): HTMLMyChartElement;
+    };
+    interface HTMLMySimpleListElement extends Components.MySimpleList, HTMLStencilElement {
+    }
+    var HTMLMySimpleListElement: {
+        prototype: HTMLMySimpleListElement;
+        new (): HTMLMySimpleListElement;
+    };
     interface HTMLElementTagNameMap {
         "app-draganddrop": HTMLAppDraganddropElement;
         "app-home": HTMLAppHomeElement;
         "app-menu": HTMLAppMenuElement;
         "app-root": HTMLAppRootElement;
+        "my-chart": HTMLMyChartElement;
+        "my-simple-list": HTMLMySimpleListElement;
     }
 }
 declare namespace LocalJSX {
@@ -56,11 +76,19 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface MyChart {
+    }
+    interface MySimpleList {
+        "group"?: string;
+        "titleText"?: string;
+    }
     interface IntrinsicElements {
         "app-draganddrop": AppDraganddrop;
         "app-home": AppHome;
         "app-menu": AppMenu;
         "app-root": AppRoot;
+        "my-chart": MyChart;
+        "my-simple-list": MySimpleList;
     }
 }
 export { LocalJSX as JSX };
@@ -71,6 +99,8 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "my-chart": LocalJSX.MyChart & JSXBase.HTMLAttributes<HTMLMyChartElement>;
+            "my-simple-list": LocalJSX.MySimpleList & JSXBase.HTMLAttributes<HTMLMySimpleListElement>;
         }
     }
 }

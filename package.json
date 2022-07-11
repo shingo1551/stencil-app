@@ -19,6 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "apexcharts": "^3.35.0",
+    "sortablejs": "^1.15.0",
     "my-comp": "file:../stencil-component"
   }
 }

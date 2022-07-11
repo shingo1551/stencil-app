@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, State } from '@stencil/core';
 
 @Component({
   tag: 'app-draganddrop',
@@ -6,9 +6,16 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class AppDraganddrop {
+  @State() loading = true;
+
+  connectedCallback() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 30);
+  }
 
   render() {
-    return (
+    return this.loading ? <Host /> : (
       <Host>
         <my-simple-list title-text="yet" group="g1">
           <li>item 1</li>

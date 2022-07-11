@@ -21,8 +21,8 @@ export class AppMenu {
 
         <A href='/hello/clicked' onClick={this.onClick}>Click me!</A>
 
-        <A href='/store'>Store</A>
         <A href='/lifecycle'>Lifecycle</A>
+        <A href='/store'>Store</A>
         <A href='/todo'>ToDo</A>
 
         <A href='/chart'>Chart</A>

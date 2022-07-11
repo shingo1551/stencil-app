@@ -32,12 +32,12 @@ export class AppRoot {
               render={({ name }) => <my-hello name={name}></my-hello>}
             />
 
-            <Route path='/store'>
-              <my-store />
-            </Route>
-
             <Route path='/lifecycle'>
               <my-lifecycle></my-lifecycle>
+            </Route>
+
+            <Route path='/store'>
+              <my-store />
             </Route>
 
             <Route path='/todo'>
